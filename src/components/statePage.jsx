@@ -56,16 +56,16 @@ const StatePage = () => {
       <div className="py-8 px-4 max-w-4xl mx-auto">
         <p className="text-lg mb-4">{description}</p>
         <div className="text-lg mb-2">
-          <strong>Capital:</strong> {capital}
+          <strong className="textcolor details">Capital:</strong> {capital}
         </div>
         <div className="text-lg mb-2">
-          <strong>Language:</strong> {language}
+          <strong className="textcolor">Language:</strong> {language}
         </div>
         <div className="text-lg mb-2">
-          <strong>Area:</strong> {area}
+          <strong className="textcolor">Area:</strong> {area}
         </div>
         <div className="text-lg mb-8">
-          <strong>Population:</strong> {population}
+          <strong className="textcolor">Population:</strong> {population}
         </div>
         <section className="text-center py-8 bg-gray-100 rounded-lg shadow-lg">
           <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
@@ -74,20 +74,22 @@ const StatePage = () => {
           <div className="flex justify-center space-x-6">
             <button
               onClick={handleMapsClick}
-              className="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105"
+              className="colorcustom text-white py-3 px-6 rounded-full  transition duration-300 transform hover:scale-105"
             >
               Go to Maps
             </button>
             <button
               onClick={handleShopClick}
-              className="bg-green-600 text-white py-3 px-6 rounded-full hover:bg-green-700 transition duration-300 transform hover:scale-105"
+              className=" colorcustom2  border-2 py-3 px-6 rounded-full  transition duration-300 transform hover:scale-105"
             >
               Shop
             </button>
           </div>
         </section>
         {/* Main title for cards */}
-        <h2 className="text-2xl font-bold mb-6 mt-4">Heritage Sites</h2>
+        <h2 className="text-2xl font-bold mb-6 mt-4 textcolor">
+          Heritage Sites
+        </h2>
 
         {/* Render the row of cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -104,7 +106,7 @@ const StatePage = () => {
         </div>
 
         {/* New Section for Products */}
-        <h2 className="text-2xl font-bold mb-6">Products</h2>
+        <h2 className="text-2xl font-bold mb-6 textcolor">Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {products.map((product) => (
             <div key={product.id} className="bg-white p-4 shadow-lg rounded-lg">
@@ -119,7 +121,7 @@ const StatePage = () => {
                 <span className="text-xl font-bold">{product.price}</span>
                 <button
                   onClick={() => handleBuyNowClick(product)} // Pass the product object
-                  className="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition duration-300"
+                  className="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition duration-300 colorcustom"
                 >
                   Buy Now
                 </button>

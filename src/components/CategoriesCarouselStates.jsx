@@ -9,7 +9,7 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin); // Register ScrollToPlugin
 
 const MAX_TEXT_LENGTH = 25;
-const SCROLL_DURATION = 17; // Duration of one scroll in seconds
+const SCROLL_DURATION = 60; // Duration of one scroll in seconds
 
 const CategoriesCarouselStates = () => {
   const categories = useSelector((state) => state.categories.list);

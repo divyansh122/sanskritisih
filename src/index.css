@@ -32,3 +32,14 @@
 .textcolor::placeholder {
   color: #9E080D; /* Replace with your desired color */
 }
+
+.colorcustom{
+  background-color: #9E080D;
+  color: "white";
+  font-weight: 500;
+}
+.colorcustom2{
+  background-color: "white";
+  color: #9E080D;
+  font-weight: 500;
+}
