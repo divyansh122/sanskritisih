@@ -7,10 +7,10 @@ const HeroSection = () => {
     <div
       className="relative rounded-lg overflow-hidden"
       style={{
-        height: "400px",
+        height: "550px", // Height of the hero section
         width: "calc(100% - 2rem)",
         maxWidth: "calc(1200px + 2rem)",
-        margin: "2rem auto 0",
+        margin: "1rem auto 0", // Reduced top margin
         padding: "0 1rem",
         boxSizing: "border-box",
       }}
