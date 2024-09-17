@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart, clearCart, selectCart } from "../store/productSlice";
+import { emptycart } from "../assets/images/images";
 
 const CartPage = () => {
   const cartItems = useSelector(selectCart);
@@ -16,9 +17,18 @@ const CartPage = () => {
 
   return (
     <div className="w-full py-8 px-4 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Your Cart</h1>
       {cartItems.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <>
+          <h1 className="text-xl font-bold mb-6 text-center">
+            Your Cart is empty
+          </h1>
+          <img
+            src={emptycart}
+            alt="Empty Cart"
+            width="50%"
+            className="mx-auto"
+          />
+        </>
       ) : (
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">

@@ -41,6 +41,7 @@ import delhi from "./delhi.jpg";
 import jwellery from "./jwellery.jpg";
 import accessories from "./accessories.jpg";
 import homedecor from "./homedecor.jpg";
+import emptycart from "./emptycart.png";
 import apparels from "./apparels.jpg";
 export {
   logo,
@@ -86,4 +87,5 @@ export {
   homedecor,
   apparels,
   accessories,
+  emptycart,
 };
