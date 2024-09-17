@@ -58,12 +58,12 @@ const Header1 = () => {
         </button>
         <button
           onClick={openSignup}
-          className="text-gray-600 hover:text-black transition border-2 py-2 px-4 rounded-full"
+          className="text-gray-600 hover:text-black transition  py-2 px-4 rounded-full"
         >
           Sign Up
         </button>
         <Link to="/cart">
-          <button className="relative text-gray-600 hover:text-black transition border-2 py-2 px-4 rounded-full">
+          <button className="relative text-gray-600 hover:text-black transition py-2 px-4 rounded-full">
             <FaShoppingCart />
             {/* Badge for cart item count */}
             {cartItems.length > 0 && (
