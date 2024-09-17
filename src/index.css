@@ -21,3 +21,14 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
 }
+.bgcolor{
+  background-color:#F1EFDD;
+}
+.textcolor{
+  color:#9E080D;
+  font-weight: 500;
+}
+/* Header2.css */
+.textcolor::placeholder {
+  color: #9E080D; /* Replace with your desired color */
+}

@@ -75,7 +75,7 @@ const CategoriesDropdown = ({ isOpen, setIsOpen }) => {
       onMouseEnter={handleMouseEnter} // Open on hover
       onMouseLeave={handleMouseLeave} // Close with delay when hover ends
     >
-      <button className="flex items-center bg-pink-50 py-2 px-4 rounded-full text-gray-500 hover:text-black transition focus:outline-none w-50">
+      <button className="flex items-center bg-pink-50 py-2 px-4 rounded-full text-gray-500 hover:text-black transition focus:outline-none w-50 textcolor">
         Categories
         {isDropdownOpen ? (
           <FiChevronUp className="ml-28 text-xl bg-white rounded-full" />

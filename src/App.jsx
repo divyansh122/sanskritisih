@@ -1,3 +1,4 @@
+// App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
@@ -6,7 +7,8 @@ import HeroSection from "./components/HeroSection";
 import Jewelry from "./components/jwellery";
 import Apparels from "./components/Apparels";
 import StatePageWrapper from "./components/StatePageWrapper";
-import CartPage from "./components/CartPage"; // Import the CartPage component
+/*import CartPage from "./components/CartPage";*/
+import "./App.css"; // Import the CSS file
 
 function App() {
   return (
@@ -18,7 +20,6 @@ function App() {
             <Layout>
               <HeroSection />
               <CategoriesCarouselStates />
-              {/* Remove CategoriesDropdown here, since it's already in Header2 */}
             </Layout>
           }
         />
@@ -46,14 +47,14 @@ function App() {
             </Layout>
           }
         />
-        <Route
+        {/*<Route
           path="/cart"
           element={
             <Layout>
-              <CartPage /> {/* Add CartPage route */}
+              <CartPage />
             </Layout>
           }
-        />
+        />*/}
       </Routes>
     </Router>
   );

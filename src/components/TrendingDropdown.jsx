@@ -63,7 +63,7 @@ const TrendingDropdown = ({ isOpen, setIsOpen }) => {
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center bg-pink-50 py-2 px-3 rounded-full text-gray-500 hover:text-black transition focus:outline-none mr-10"
+        className="flex items-center bg-pink-50 py-2 px-3 rounded-full text-gray-500 hover:text-black transition focus:outline-none mr-10 textcolor"
       >
         Trending
         {isOpen ? (

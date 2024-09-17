@@ -30,13 +30,13 @@ const HeroSection = () => {
         <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 px-6 md:px-16 lg:px-20">
           {/* Reduced space between buttons */}
           <button
-            className="px-8 py-3 bg-white text-gray-600 font-semibold rounded-full shadow-md" // Disabled button styles
+            className="px-8 py-3 bg-white text-gray-600 font-semibold rounded-full shadow-md textcolor" // Disabled button styles
             disabled
           >
             Explore Map
           </button>
           <button className="px-6 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-200 transition">
-            <span className="flex items-center">
+            <span className="flex items-center textcolor">
               <MdOutlineArrowOutward />
             </span>
           </button>

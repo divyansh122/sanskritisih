@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart, clearCart, selectCart } from "../store/productSlice";
 import { emptycart } from "../assets/images/images";
@@ -62,4 +62,4 @@ const CartPage = () => {
   );
 };
 
-export default CartPage;
+export default CartPage;*/

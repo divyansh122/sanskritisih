@@ -26,8 +26,12 @@ const Header1 = () => {
     setModalVisible(false);
   };
 
+  const handleShopClick = () => {
+    window.location.href = "https://shop.sanskriti.pushkarverma.dev/";
+  };
+
   return (
-    <header className="flex justify-between items-center py-4 px-8 bg-white shadow-sm relative z-100">
+    <header className="flex justify-between items-center py-4 px-8 bg-white relative z-100 bgcolor">
       <div className="flex items-center space-x-4">
         <button className="text-gray-600 hover:text-black">
           <GiHamburgerMenu />
@@ -44,35 +48,44 @@ const Header1 = () => {
       </div>
 
       <div className="flex items-center space-x-6">
-        <button className="text-gray-600 hover:text-black transition">
+        <button className="text-gray-600 hover:text-black transition textcolor">
           About
         </button>
-        <button className="text-gray-600 hover:text-black transition">
+        <button className="text-gray-600 hover:text-black transition textcolor">
           FAQs
         </button>
         <button
-          className="text-gray-600 hover:text-black transition"
+          className="text-gray-600 hover:text-black transition textcolor"
           onClick={openLogin}
         >
           Login
         </button>
         <button
           onClick={openSignup}
-          className="text-gray-600 hover:text-black transition  py-2 px-4 rounded-full"
+          className="text-gray-600 hover:text-black transition textcolor py-2 px-4 rounded-full"
         >
           Sign Up
         </button>
-        <Link to="/cart">
+
+        {/* Shop Button */}
+        <button
+          onClick={handleShopClick}
+          className="border border-gray-300 text-gray-600 hover:text-black transition py-2 px-4 rounded-full textcolor"
+        >
+          Shop
+        </button>
+
+        {/* Uncomment and update the cart button */}
+        {/* <Link to="/cart">
           <button className="relative text-gray-600 hover:text-black transition py-2 px-4 rounded-full">
             <FaShoppingCart />
-            {/* Badge for cart item count */}
             {cartItems.length > 0 && (
               <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                 {cartItems.length}
               </span>
             )}
           </button>
-        </Link>
+        </Link> */}
       </div>
 
       <LoginSignupModal
