@@ -8,23 +8,23 @@ const HeroSection = () => {
       className="relative bg-cover bg-center rounded-lg"
       style={{
         backgroundImage: `url(${homepagebanner})`,
-        height: "400px", // Keep the height the same
-        width: "calc(100% - 2rem)", // Full width minus space on the left and right
-        maxWidth: "calc(1200px + 2rem)", // Maximum width plus space on the left and right
-        margin: "2rem auto 0", // Space around the edges: 2rem top, auto horizontal
-        padding: "0 1rem", // Space on the left and right edges
-        boxSizing: "border-box", // Include padding in the element's total width and height
-        backgroundSize: "cover", // Ensure image covers the container
-        backgroundPosition: "center", // Center the image
-        overflow: "hidden", // Prevent scroll bars
-        zIndex: 1, // Ensure it’s behind other elements
+        height: "400px",
+        width: "calc(100% - 2rem)",
+        maxWidth: "calc(1200px + 2rem)",
+        margin: "2rem auto 0",
+        padding: "0 1rem",
+        boxSizing: "border-box",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        overflow: "hidden",
+        zIndex: 1,
       }}
     >
       <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>{" "}
       {/* Dark overlay */}
       <div className="absolute inset-0 flex flex-col justify-center items-start px-6 md:px-16 lg:px-20">
-        <h1 className="text-white text-4xl md:text-5xl font-bold mb-10 text-center">
-          Sanskriti <br /> Heritage Map of India
+        <h1 className="text-white text-4xl md:text-5xl font-bold mb-10 ">
+          Sanskriti : <br /> Heritage Map of India
         </h1>
         {/* Centered Button Container */}
         <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 px-6 md:px-16 lg:px-20">
