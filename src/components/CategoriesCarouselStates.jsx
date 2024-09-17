@@ -9,7 +9,7 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin); // Register ScrollToPlugin
 
 const MAX_TEXT_LENGTH = 25;
-const SCROLL_DURATION = 10; // Duration of one scroll in seconds
+const SCROLL_DURATION = 17; // Duration of one scroll in seconds
 
 const CategoriesCarouselStates = () => {
   const categories = useSelector((state) => state.categories.list);
@@ -33,30 +33,6 @@ const CategoriesCarouselStates = () => {
     }
   }, [isPaused]);
 
-  const handlePrev = () => {
-    if (carouselRef.current) {
-      gsap.to(carouselRef.current, {
-        scrollTo: {
-          x: carouselRef.current.scrollLeft - carouselRef.current.offsetWidth,
-        },
-        duration: 1,
-        ease: "power2.inOut",
-      });
-    }
-  };
-
-  const handleNext = () => {
-    if (carouselRef.current) {
-      gsap.to(carouselRef.current, {
-        scrollTo: {
-          x: carouselRef.current.scrollLeft + carouselRef.current.offsetWidth,
-        },
-        duration: 1,
-        ease: "power2.inOut",
-      });
-    }
-  };
-
   const formatText = (text) => {
     if (text.length > MAX_TEXT_LENGTH) {
       return `${text.substring(0, MAX_TEXT_LENGTH)}...`;
@@ -69,6 +45,8 @@ const CategoriesCarouselStates = () => {
       <div
         className="flex overflow-x-scroll whitespace-nowrap py-4 no-scrollbar"
         ref={carouselRef}
+        onMouseEnter={() => setIsPaused(true)} // Pause on hover
+        onMouseLeave={() => setIsPaused(false)} // Resume on hover out
       >
         {categories.map((category) => (
           <Link
@@ -91,20 +69,6 @@ const CategoriesCarouselStates = () => {
             </p>
           </Link>
         ))}
-      </div>
-      <div className="absolute inset-0 flex items-center justify-between px-4">
-        <button
-          onClick={handlePrev}
-          className="bg-gray-700 text-white p-2 rounded-full shadow-md hover:bg-gray-800"
-        >
-          &#9664;
-        </button>
-        <button
-          onClick={handleNext}
-          className="bg-gray-700 text-white p-2 rounded-full shadow-md hover:bg-gray-800"
-        >
-          &#9654;
-        </button>
       </div>
     </div>
   );
