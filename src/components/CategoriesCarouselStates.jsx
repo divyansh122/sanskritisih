@@ -25,8 +25,8 @@ const CategoriesCarouselStates = () => {
           className="inline-block mx-2 flex flex-col items-center justify-center cursor-pointer"
           style={{ width: "120px", height: "180px" }}
         >
-          <div className="relative mb-2">
-            <div className="w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center overflow-hidden">
+          <div className="relative mb-2 flex items-center justify-center w-24 h-24">
+            <div className="w-full h-full bg-white rounded-full shadow-lg flex items-center justify-center overflow-hidden">
               <img
                 src={getImage(category.imageName)} // Use getImage with the imageName
                 alt={category.name}
@@ -34,7 +34,7 @@ const CategoriesCarouselStates = () => {
               />
             </div>
           </div>
-          <p className="text-center text-sm font-semibold mt-2 whitespace-normal">
+          <p className="text-center text-sm font-semibold mt-2 whitespace-nowrap overflow-hidden text-ellipsis">
             {formatText(category.name)}
           </p>
         </Link>

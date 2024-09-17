@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import CategoriesCarouselStates from "./components/CategoriesCarouselStates";
 import HeroSection from "./components/HeroSection";
-import CategoriesDropdown from "./components/CategoriesDropdown";
 import Jewelry from "./components/jwellery";
 import Apparels from "./components/Apparels";
 import StatePageWrapper from "./components/StatePageWrapper";
@@ -19,7 +18,7 @@ function App() {
             <Layout>
               <HeroSection />
               <CategoriesCarouselStates />
-              <CategoriesDropdown />
+              {/* Remove CategoriesDropdown here, since it's already in Header2 */}
             </Layout>
           }
         />

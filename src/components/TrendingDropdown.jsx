@@ -63,13 +63,13 @@ const TrendingDropdown = ({ isOpen, setIsOpen }) => {
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center bg-pink-50 py-2 px-3 rounded-full text-gray-500 hover:text-black transition focus:outline-none"
+        className="flex items-center bg-pink-50 py-2 px-3 rounded-full text-gray-500 hover:text-black transition focus:outline-none mr-10"
       >
         Trending
         {isOpen ? (
-          <FiChevronUp className="ml-10 bg-white rounded-full text-xl" />
+          <FiChevronUp className="ml-28 bg-white rounded-full text-xl" />
         ) : (
-          <FiChevronDown className="ml-10 bg-white rounded-full text-xl" />
+          <FiChevronDown className="ml-28 bg-white rounded-full text-xl" />
         )}
       </button>
       {isOpen && (

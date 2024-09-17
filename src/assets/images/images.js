@@ -43,7 +43,9 @@ import accessories from "./accessories.jpg";
 import homedecor from "./homedecor.jpg";
 import emptycart from "./emptycart.png";
 import apparels from "./apparels.jpg";
+import herosectionvideo from "../videos/herosection.mp4";
 export {
+  herosectionvideo,
   logo,
   tajmahal,
   recentdiscovery,

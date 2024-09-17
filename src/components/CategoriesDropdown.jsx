@@ -78,9 +78,9 @@ const CategoriesDropdown = ({ isOpen, setIsOpen }) => {
       <button className="flex items-center bg-pink-50 py-2 px-4 rounded-full text-gray-500 hover:text-black transition focus:outline-none w-50">
         Categories
         {isDropdownOpen ? (
-          <FiChevronUp className="ml-2 text-xl bg-white rounded-full" />
+          <FiChevronUp className="ml-28 text-xl bg-white rounded-full" />
         ) : (
-          <FiChevronDown className="ml-2 text-xl bg-white rounded-full" />
+          <FiChevronDown className="ml-28 text-xl bg-white rounded-full" />
         )}
       </button>
       {isDropdownOpen && (
