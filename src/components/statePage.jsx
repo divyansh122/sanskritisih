@@ -1,34 +1,48 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import getImage from "../states/imageMapper";
 import statesData from "../states/states.json";
 import Card from "./Card";
-import { selectStateCards } from "../store/stateCardSlice"; // Selector to get cards
+import { selectStateCards } from "../store/stateCardSlice";
+import { addToCart } from "../store/productSlice";
 
 const StatePage = () => {
   const { stateId } = useParams();
-  const navigate = useNavigate(); // Use navigate for routing
-  const state = statesData.find((state) => state.id === stateId);
+  const navigate = useNavigate();
+  const dispatch = useDispatch(); // Use dispatch for Redux actions
 
-  const stateCards = useSelector(selectStateCards); // Get all state cards
+  const state = statesData.find((state) => state.id === stateId);
+  const stateCards = useSelector(selectStateCards);
   const cardsForState =
-    stateCards.find((card) => card.stateId === stateId)?.cards || []; // Get cards for the current state
+    stateCards.find((card) => card.stateId === stateId)?.cards || [];
 
   if (!state) return <div>State not found</div>;
 
-  const { name, imageName, description, capital, language, area, population } =
-    state;
+  const {
+    name,
+    imageName,
+    description,
+    capital,
+    language,
+    area,
+    population,
+    products,
+  } = state;
+
   const imageUrl = getImage(imageName);
 
   const handleMapsClick = () => {
-    // Navigate to the maps page
     navigate("/maps");
   };
 
   const handleShopClick = () => {
-    // Navigate to the shop page
     window.location.href = "https://shop.sanskriti.pushkarverma.dev/";
+  };
+
+  const handleBuyNowClick = (product) => {
+    dispatch(addToCart(product)); // Dispatch action to add product to cart
+    navigate("/cart"); // Navigate to cart page
   };
 
   return (
@@ -66,8 +80,33 @@ const StatePage = () => {
               title={card.title}
               description={card.description}
               link="#"
-              className="bg-white p-4 shadow-lg rounded-lg h-64" // Ensure uniform card size
+              className="bg-white p-4 shadow-lg rounded-lg h-64"
             />
+          ))}
+        </div>
+
+        {/* New Section for Products */}
+        <h2 className="text-2xl font-bold mb-6">Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {products.map((product) => (
+            <div key={product.id} className="bg-white p-4 shadow-lg rounded-lg">
+              <img
+                src={getImage(product.image)}
+                alt={product.name}
+                className="w-full h-40 object-cover mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+              <p className="text-lg mb-4">{product.description}</p>
+              <div className="flex justify-between items-center">
+                <span className="text-xl font-bold">{product.price}</span>
+                <button
+                  onClick={() => handleBuyNowClick(product)} // Pass the product object
+                  className="bg-red-500 text-white py-2 px-4 rounded-full hover:bg-red-600 transition duration-300"
+                >
+                  Buy Now
+                </button>
+              </div>
+            </div>
           ))}
         </div>
 

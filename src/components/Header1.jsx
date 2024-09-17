@@ -4,10 +4,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { logo } from "../assets/images/images";
 import LoginSignupModal from "./login";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectCart } from "../store/productSlice";
 
 const Header1 = () => {
   const [isModalVisible, setModalVisible] = useState(false);
   const [isLoginMode, setLoginMode] = useState(true);
+  const cartItems = useSelector(selectCart); // Get cart items from the store
 
   const openLogin = () => {
     setLoginMode(true);
@@ -20,11 +23,7 @@ const Header1 = () => {
   };
 
   const closeModal = () => {
-    setModalVisible(false); // Hide the modal
-  };
-
-  const handleCartClick = () => {
-    window.location.href = "https://shop.sanskriti.pushkarverma.dev/";
+    setModalVisible(false);
   };
 
   return (
@@ -53,29 +52,33 @@ const Header1 = () => {
         </button>
         <button
           className="text-gray-600 hover:text-black transition"
-          onClick={openLogin} // Trigger login modal
+          onClick={openLogin}
         >
           Login
         </button>
         <button
-          onClick={openSignup} // Trigger sign up modal
+          onClick={openSignup}
           className="text-gray-600 hover:text-black transition border-2 py-2 px-4 rounded-full"
         >
           Sign Up
         </button>
-        <button
-          className="text-gray-600 hover:text-black transition border-2 py-2 px-4 rounded-full"
-          onClick={handleCartClick} // Navigate to external URL
-        >
-          Shop
-        </button>
+        <Link to="/cart">
+          <button className="relative text-gray-600 hover:text-black transition border-2 py-2 px-4 rounded-full">
+            <FaShoppingCart />
+            {/* Badge for cart item count */}
+            {cartItems.length > 0 && (
+              <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                {cartItems.length}
+              </span>
+            )}
+          </button>
+        </Link>
       </div>
 
-      {/* Reusable Modal */}
       <LoginSignupModal
-        isVisible={isModalVisible} // Control modal visibility
-        onClose={closeModal} // Close modal function
-        isLoginMode={isLoginMode} // Determine if it's login or sign up mode
+        isVisible={isModalVisible}
+        onClose={closeModal}
+        isLoginMode={isLoginMode}
       />
     </header>
   );

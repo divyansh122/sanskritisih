@@ -7,6 +7,7 @@ import CategoriesDropdown from "./components/CategoriesDropdown";
 import Jewelry from "./components/jwellery";
 import Apparels from "./components/Apparels";
 import StatePageWrapper from "./components/StatePageWrapper";
+import CartPage from "./components/CartPage"; // Import the CartPage component
 
 function App() {
   return (
@@ -43,6 +44,14 @@ function App() {
           element={
             <Layout>
               <StatePageWrapper />
+            </Layout>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <Layout>
+              <CartPage /> {/* Add CartPage route */}
             </Layout>
           }
         />
