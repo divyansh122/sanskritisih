@@ -8,10 +8,10 @@ const HeroSection = () => {
       className="relative rounded-lg overflow-hidden"
       style={{
         height: "550px", // Height of the hero section
-        width: "calc(100% - 2rem)",
-        maxWidth: "calc(1200px + 2rem)",
+        width: "calc(100% - 10rem)", // Further increased width
+        maxWidth: "calc(1200px + 10rem)", // Adjusted maxWidth to match increased width
         margin: "1rem auto 0", // Reduced top margin
-        padding: "0 1rem",
+        padding: "0 3rem", // Increased padding for better balance
         boxSizing: "border-box",
       }}
     >
