@@ -5,19 +5,19 @@
       {
         "title": "Cultural Heritage Sites",
         "description": "Explore the rich cultural heritage of Andhra Pradesh.",
-        "imageSrc": "/images/andhra-pradesh/culture.jpg",
+        "imageSrc": "andhraheritage",
         "link": "#"
       },
       {
         "title": "Famous Temples",
         "description": "Visit the renowned Tirupati Temple and other historic temples.",
-        "imageSrc": "/images/andhra-pradesh/temples.jpg",
+        "imageSrc": "",
         "link": "#"
       },
       {
         "title": "Picturesque Beaches",
         "description": "Relax on the stunning beaches of Andhra Pradesh.",
-        "imageSrc": "/images/andhra-pradesh/beaches.jpg",
+        "imageSrc": "",
         "link": "#"
       }
     ]

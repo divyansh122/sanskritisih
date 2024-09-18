@@ -1,5 +1,6 @@
 // src/assets/images/images.js
 import tajmahal from "./tajmahal.jpg";
+import andhraheritage from "./andhraheritage.jpg";
 import recentdiscovery from "./recentdiscovery.jpg";
 import marker from "./marker.png";
 import logo from "./logo.png";
@@ -30,7 +31,7 @@ import nagaland from "./nagaland.jpg";
 import odisha from "./odisha.jpg";
 import sikkim from "./sikkim.jpg";
 import tripura from "./tripura.jpg";
-import up from "./uttarpradesh.jpg";
+import uttarpradesh from "./uttarpradesh.jpg";
 import andaman from "./andaman.jpg";
 import telangana from "./telangana.jpg";
 import chandigarh from "./chandigarh.jpg";
@@ -45,6 +46,7 @@ import emptycart from "./emptycart.png";
 import apparels from "./apparels.jpg";
 import herosectionvideo from "../videos/herosection.mp4";
 export {
+  andhraheritage,
   herosectionvideo,
   logo,
   tajmahal,
@@ -75,7 +77,6 @@ export {
   mizoram,
   nagaland,
   odisha,
-  up,
   sikkim,
   tripura,
   andaman,
@@ -90,4 +91,5 @@ export {
   apparels,
   accessories,
   emptycart,
+  uttarpradesh,
 };

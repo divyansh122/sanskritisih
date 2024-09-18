@@ -678,7 +678,7 @@
   {
     "id": "uttar-pradesh",
     "name": "Uttar Pradesh",
-    "imageName": "up",
+    "imageName": "u",
     "description": "Uttar Pradesh is known for its rich history, cultural heritage, and vibrant festivals. The state features important historical sites, including the Taj Mahal, and a diverse range of traditional crafts and cuisine. Uttar Pradesh's cultural and historical significance makes it an important region in India.",
     "capital": "Lucknow",
     "language": "Hindi",
@@ -730,7 +730,7 @@
   {
     "id": "west-bengal",
     "name": "West Bengal",
-    "imageName": "westbengal",
+    "imageName": "westbangal",
     "description": "West Bengal is known for its rich cultural heritage, including classical arts, literature, and cuisine. The state features historical landmarks, vibrant festivals, and scenic beauty, including the Sundarbans and the Himalayan foothills. West Bengal's cultural and natural attractions make it a significant region in Eastern India.",
     "capital": "Kolkata",
     "language": "Bengali",
