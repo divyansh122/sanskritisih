@@ -60,7 +60,7 @@ const LoginSignupModal = ({ isVisible, onClose, isLoginMode }) => {
           <div>
             <button
               type="submit"
-              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white colorcustom  "
             >
               {isLoginMode ? "Login" : "Sign Up"}
             </button>
@@ -72,10 +72,7 @@ const LoginSignupModal = ({ isVisible, onClose, isLoginMode }) => {
           {isLoginMode ? (
             <>
               Don't have an account?{" "}
-              <button
-                className="text-indigo-600 hover:text-indigo-500"
-                onClick={onClose}
-              >
+              <button className=" textcolor" onClick={onClose}>
                 Sign Up
               </button>
             </>
@@ -83,7 +80,7 @@ const LoginSignupModal = ({ isVisible, onClose, isLoginMode }) => {
             <>
               Already have an account?{" "}
               <button
-                className="text-indigo-600 hover:text-indigo-500"
+                className="text-indigo-600 hover:text-indigo-500 textcolor"
                 onClick={onClose}
               >
                 Login

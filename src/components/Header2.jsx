@@ -12,13 +12,13 @@ const Header2 = () => {
       {/* Left Section: Categories, Trending, Search */}
       <div className="flex items-center space-x-8 flex-grow">
         {/* Increased space-x from 4 to 8 */}
-        <div className="flex w-50 ">
+        <div className="flex w-50 z-10  ">
           <CategoriesDropdown
             isOpen={isCategoriesOpen}
             setIsOpen={setCategoriesOpen}
           />
         </div>
-        <div className="flex w-50">
+        <div className="flex w-50 z-10">
           <TrendingDropdown
             isOpen={isTrendingOpen}
             setIsOpen={setTrendingOpen}
