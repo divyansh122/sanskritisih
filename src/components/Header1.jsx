@@ -10,7 +10,7 @@ import { selectCart } from "../store/productSlice";
 const Header1 = () => {
   const [isModalVisible, setModalVisible] = useState(false);
   const [isLoginMode, setLoginMode] = useState(true);
-  const cartItems = useSelector(selectCart); // Get cart items from the store
+  //const cartItems = useSelector(selectCart); // Get cart items from the store
 
   const openLogin = () => {
     setLoginMode(true);
@@ -32,21 +32,21 @@ const Header1 = () => {
 
   return (
     <header className="flex justify-between items-center py-4 px-8 bg-white relative z-100 bgcolor">
+      {/* Left Side: Hamburger Menu */}
       <div className="flex items-center space-x-4">
         <button className="text-gray-600 hover:text-black">
           <GiHamburgerMenu />
         </button>
       </div>
 
-      <div
-        className="flex-grow flex justify-center items-center"
-        style={{ marginLeft: "250px" }}
-      >
+      {/* Center: Logo */}
+      <div className="absolute left-1/2 transform -translate-x-1/2">
         <Link to="/">
           <img src={logo} alt="Logo" className="h-10" />
         </Link>
       </div>
 
+      {/* Right Side: Buttons */}
       <div className="flex items-center space-x-6">
         <button className="text-gray-600 hover:text-black transition textcolor">
           About
@@ -62,7 +62,7 @@ const Header1 = () => {
         </button>
         <button
           onClick={openSignup}
-          className="text-gray-600 hover:text-black transition textcolor py-2 px-4 rounded-full"
+          className="text-gray-600 hover:text-black transition textcolor  rounded-full"
         >
           Sign Up
         </button>
