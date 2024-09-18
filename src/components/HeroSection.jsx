@@ -1,6 +1,7 @@
 import React from "react";
 import { herosectionvideo } from "../assets/images/images"; // Ensure this import is correct
 import { MdOutlineArrowOutward } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -29,17 +30,21 @@ const HeroSection = () => {
         {/* Centered Button Container */}
         <div className="absolute bottom-8 left-0 right-0 flex justify-center space-x-2 px-6 md:px-16 lg:px-20">
           {/* Reduced space between buttons */}
+          <NavLink to={"/india"}>
           <button
             className="px-8 py-3 bg-white text-gray-600 font-semibold rounded-full shadow-md textcolor" // Disabled button styles
             disabled
           >
             Explore Map
-          </button>
+          </button >
+          </NavLink>
+          <NavLink to={"/map"}>
           <button className="px-6 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-200 transition">
             <span className="flex items-center textcolor">
               <MdOutlineArrowOutward />
             </span>
           </button>
+          </NavLink>
         </div>
       </div>
     </div>
