@@ -4,13 +4,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { logo } from "../assets/images/images";
 import LoginSignupModal from "./login";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { selectCart } from "../store/productSlice";
+//import { useSelector } from "react-redux";
+//import { selectCart } from "../store/productSlice";
 
 const Header1 = () => {
   const [isModalVisible, setModalVisible] = useState(false);
   const [isLoginMode, setLoginMode] = useState(true);
-  //const cartItems = useSelector(selectCart); // Get cart items from the store
 
   const openLogin = () => {
     setLoginMode(true);

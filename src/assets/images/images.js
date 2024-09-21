@@ -45,8 +45,23 @@ import homedecor from "./homedecor.jpg";
 import emptycart from "./emptycart.png";
 import apparels from "./apparels.jpg";
 import herosectionvideo from "../videos/herosection.mp4";
+import card1 from "./card1.png";
+import card2 from "./card2.png";
+import card3 from "./card3.png";
+import card4 from "./card4.png";
+import artist1 from "./artist1.png";
+import artist2 from "./artist2.png";
+import artist3 from "./artist3.png";
+
 export {
   andhraheritage,
+  card1,
+  artist1,
+  artist2,
+  artist3,
+  card2,
+  card3,
+  card4,
   herosectionvideo,
   logo,
   tajmahal,

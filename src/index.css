@@ -43,3 +43,49 @@
   color: #9E080D;
   font-weight: 500;
 }
+.whatsnewcardtext {
+  color: #9E080D;
+  font-weight: 700;
+  background-color: rgba(234, 234, 234, 0.8); /* 50% opacity */
+  font-size: x-small;
+  margin: 4px 0; /* Vertical margin only, no left/right margin */
+  padding: 2px; /* Padding for better spacing */
+  border-radius: 4px; /* Round corners */
+  display: inline-block; /* Fit background to text */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 30px; /* Adjust the size of the arrows */
+  height: 30px; /* Adjust the size of the arrows */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional background for visibility */
+  border-radius: 50%; /* Optional: rounded shape */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  border: none; /* Remove border */
+  background: transparent; /* Transparent background */
+  cursor: pointer; /* Change cursor on hover */
+  height: 100%; /* Ensure buttons cover full height */
+  width: 40px; /* Set width for buttons */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background on hover */
+}
+
+.flex {
+  display: flex; /* Ensure flex display */
+  align-items: center; /* Center items vertically */
+}
+
+.shadow-md {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+
+.object-cover {
+  object-fit: cover; /* Cover image within its box */
+}
+
