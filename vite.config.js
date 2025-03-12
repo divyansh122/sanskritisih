@@ -5,11 +5,11 @@ import autoprefixer from "autoprefixer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/sanskritisih/",
   plugins: [react()],
   css: {
     postcss: {
       plugins: [tailwindcss, autoprefixer],
+      base: "/sanskritisih/",
     },
   },
 });
